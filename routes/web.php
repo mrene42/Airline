@@ -10,7 +10,7 @@ use App\Http\Controllers\FlightController;
     return view('welcome');
 }); */
 
-Auth::routes();
+//Auth::routes();
 
 //Plane routes
 Route::get('/planes', [PlaneController::class, 'index'])->name('planeHome');
