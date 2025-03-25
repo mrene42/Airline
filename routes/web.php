@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlaneController;
 use App\Http\Controllers\FlightController;
 
-/*Route::get('/', function () {
-    return view('welcome');
-}); */
+Route::get('/', function () {
+    return view('home');
+});
 
-Auth::routes();
+//Auth::routes();
 
 //Plane routes
 Route::get('/planes', [PlaneController::class, 'index'])->name('planeHome');
