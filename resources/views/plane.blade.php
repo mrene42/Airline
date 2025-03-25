@@ -1,36 +1,35 @@
 @extends('layouts.app')
 @section('content')
-    <div class=" mx-auto  px-4 bg-gradient-to-b  py-8">
-        <div class="overflow-hidden rounded-lg shadow-lg text-white">
-            <table class="min-w-full table-christmas-gradient table-auto border-collapse text-sm">
-                <thead>
-                    <tr class="bg-red-700">
-                        <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
-                            ID</th>
-                        <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
-                            Name</th>
-                        <th
-                            class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider flex justify-center">
-                            Seats</th>
-                        <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
-                            Imagen</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-red-50">
-                        
-                    @foreach ( $planes as $plane )
-                        <tr
-                            class="bg-red-100 hover:bg-red-300 transition ease-in-out duration-200 transform hover:scale-100">
-                            <td class="font-serif text-md leading-tight border-dashed text-black border-red-300 px-6 py-4">
-                                {{ $plane->id }}</td>
-                            <td class="font-serif text-md leading-tight border-dashed text-black border-red-300 px-6 py-4">
-                                {{ $plane->name }}</td>
-                            <td class="border-dashed text-black border-red-300 px-6 py-4">{{ $plane->seats }}</td>
-                            <td class="border-dashed text-black border-red-300 px-6 py-4">{{ $plane->imgplane }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+<div class="relative flex flex-col md:flex-row w-full my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
+    @foreach ($planes as $plane)
+        <div class="relative p-2.5 md:w-2/5 shrink-0 overflow-hidden">
+        <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
+            alt="card-image"
+            class="h-full w-full rounded-md md:rounded-lg object-cover"
+        />
         </div>
-    </div>
+        <div class="p-6">
+        <div class="mb-4 rounded-full bg-teal-600 py-0.5 px-2.5 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">STARTUP</div>
+        <h4 class="mb-2 text-slate-800 text-xl font-semibold">
+            {{ $plane->name }}
+        </h4>
+        <p class="mb-8 text-slate-600 leading-normal font-light">
+            Like so many organizations these days, Autodesk is a company in
+            transition. It was until recently a traditional boxed software company
+            selling licenses. Yet its own business model disruption is only part
+            of the story
+        </p>
+        <div>
+            <a href="#" class="text-slate-800 font-semibold text-sm hover:underline flex items-center">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+            </a>
+        </div>
+        </div> 
+    @endforeach
+    
+  </div> 
 @endsection
