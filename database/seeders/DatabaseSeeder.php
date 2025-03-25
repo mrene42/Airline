@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
             'departure' => 'New York',
             'arrival' => 'London',
             'plane_id' => 1,
-            'available'=> 366,
+            'available'=> true,
         ]);
 
         Flight::create([
@@ -62,7 +62,7 @@ class DatabaseSeeder extends Seeder
             'departure' => 'London',
             'arrival' => 'New York',
             'plane_id' => 2,
-            'available'=> 555,
+            'available'=> false,
         ]);
 
         Flight::create([
@@ -71,7 +71,7 @@ class DatabaseSeeder extends Seeder
             'departure' => 'New York',
             'arrival' => 'London',
             'plane_id' => 1,
-            'available'=> 366,
+            'available'=> true,
         ]);
     }
 }
