@@ -1,36 +1,33 @@
 @extends('layouts.app')
 @section('content')
-    <div class=" mx-auto  px-4 bg-gradient-to-b  py-8">
-        <div class="overflow-hidden rounded-lg shadow-lg text-white">
-            <table class="min-w-full table-christmas-gradient table-auto border-collapse text-sm">
-                <thead>
-                    <tr class="bg-red-700">
-                        <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
-                            ID</th>
-                        <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
-                            Name</th>
-                        <th
-                            class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider flex justify-center">
-                            Seats</th>
-                        <th class="border-b-2 border-red-800 px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">
-                            Imagen</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-red-50">
-                        
-                    @foreach ( $planes as $plane )
-                        <tr
-                            class="bg-red-100 hover:bg-red-300 transition ease-in-out duration-200 transform hover:scale-100">
-                            <td class="font-serif text-md leading-tight border-dashed text-black border-red-300 px-6 py-4">
-                                {{ $plane->id }}</td>
-                            <td class="font-serif text-md leading-tight border-dashed text-black border-red-300 px-6 py-4">
-                                {{ $plane->name }}</td>
-                            <td class="border-dashed text-black border-red-300 px-6 py-4">{{ $plane->seats }}</td>
-                            <td class="border-dashed text-black border-red-300 px-6 py-4">{{ $plane->imgplane }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+<div class="container mx-auto my-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">List of planes</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        @foreach ($planes as $plane)
+            <div class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                <div class="h-48 bg-cover bg-center" style="background-image: url({{ $plane->imgplane }});">
+                </div>
+
+                <div class="p-5">
+                    <p class="text-sm text-gray-500">ID: <span class="font-semibold">{{ $plane->id }}</span></p>
+                    
+                    <h2 class="text-lg font-bold text-gray-900 mt-2">
+                        {{ $plane->name}}
+                    </h2>
+
+                    <p class="text-gray-700 text-sm mt-2">Seats: <span class="font-medium">{{ $plane->seats}}</span></p>                    
+                    
+                    <div class="flex items-center mt-4"> 
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                         Edit
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        @endforeach
     </div>
+
+</div>
 @endsection
