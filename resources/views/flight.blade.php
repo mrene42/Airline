@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="p-5">
-                    <p class="text-sm text-gray-500">Plane: <span class="font-semibold">{{ $flight->plane_id }}</span></p>
+                    <p class="text-sm text-gray-500">Flight: <span class="font-semibold">{{ $flight->id }}</span></p>
                     
                     <h2 class="text-lg font-bold text-gray-900 mt-2">
                         {{ $flight->departure }} → {{ $flight->arrival }}
@@ -22,7 +22,7 @@
                     <div class="flex items-center mt-4">
                         <img class="w-10 h-10 rounded-full mr-3" src="https://cdn.pixabay.com/photo/2021/11/30/00/42/airplane-icon-6834138_1280.png" alt="Airplane">
                         <div>
-                            <p class="text-gray-900 text-sm font-semibold">Flight #{{ $flight->id }}</p>
+                            <p class="text-gray-900 text-sm font-semibold">Plane #{{ $flight->plane_id }}</p>
                             <p class="text-gray-600 text-xs">Reservation</p>
                         </div>
                     </div>
