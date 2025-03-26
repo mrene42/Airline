@@ -6,20 +6,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlaneController;
 use App\Http\Controllers\FlightController;
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+}); */
 
 Auth::routes();
-
-// Login routes
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('loginProcess');
-
-Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
-Route::post('/register', [AuthController::class, 'register'])->name('registerProcess');
-
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //Plane routes
 Route::get('/planes', [PlaneController::class, 'index'])->name('planeHome');
