@@ -36,13 +36,13 @@ class DatabaseSeeder extends Seeder
         Plane::create([
             'name' => 'Boeing 747',
             'seats' => 366,
-            'imgplane' => 'boeing747.jpg',
+            'imgplane' => 'https://a21.com.mx/sites/default/files/field/image/imageickhckjc.jpg',
         ]);
 
         Plane::create([
             'name' => 'Airbus A380',
             'seats' => 555,
-            'imgplane' => 'airbusa380.jpg',
+            'imgplane' => 'https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2025/02/global-airlines-2025-airbus-a380.jpeg',
         ]);
 
         // Flight seeder
