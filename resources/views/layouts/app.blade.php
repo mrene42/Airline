@@ -16,7 +16,7 @@
 
         <x-header />
 
-        <main class="flex-grow bg-sky-50">
+        <main class="flex-grow bg-gray-200">
             @yield('content')
         </main>
 
