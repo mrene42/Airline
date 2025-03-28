@@ -15,7 +15,7 @@ class FlightController extends Controller
     public function index()
     {
         $flights = Flight::all();
-        return view('flight', compact('flights'));
+        return view('flights.flight', compact('flights'));
     }
 
     /**

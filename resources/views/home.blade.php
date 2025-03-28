@@ -20,17 +20,3 @@
             More information →
             </a>
         </div>
-
-    </div>
-
-
-    <style>
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
-    .animate-fade-in.delay-200 { animation-delay: 0.2s; }
-    .animate-fade-in.delay-400 { animation-delay: 0.4s; }
-    </style>
-@endsection

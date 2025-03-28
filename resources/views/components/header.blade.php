@@ -4,7 +4,7 @@
         <nav>
             <ul class="hidden md:flex space-x-4">
                 <li><a href="/" class="hover:underline">Home</a></li>
-                <li><a href="{{ route('planeHome') }}" class="hover:underline">Plane</a></li>
+                <li><a href="{{ route('planeHome') }}" class="hover:underline">Planes</a></li>
                 <li><a href="{{ route('flightHome') }}" class="hover:underline">Flights</a></li>
             </ul>
         </nav>

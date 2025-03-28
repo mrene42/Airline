@@ -14,7 +14,7 @@ class PlaneController extends Controller
     public function index()
     {
         $planes = Plane::all();
-        return view('plane', compact('planes'));
+        return view('planes.plane', compact('planes'));
     }
 
     /**

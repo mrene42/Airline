@@ -13,13 +13,13 @@ class AuthController extends Controller
     /*Mostrar el formulario de login*/
     public function showLoginForm()
     {
-        return view('login');
+        return view('auth.login');
     }
 
     /*Mostrar el formulario de registro*/
     public function showRegisterForm()
     {
-        return view('register');
+        return view('auth.register');
     }
 
     /*Registrar un nuevo usuario*/
