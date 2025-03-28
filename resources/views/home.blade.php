@@ -20,3 +20,5 @@
             More information →
             </a>
         </div>
+    </div>
+@endsection
