@@ -23,13 +23,12 @@
                         <img class="w-10 h-10 rounded-full mr-3" src="https://cdn.pixabay.com/photo/2021/11/30/00/42/airplane-icon-6834138_1280.png" alt="Airplane">
                         <div>
                             <p class="text-gray-900 text-sm font-semibold">Plane #{{ $flight->plane_id }}</p>
-                            <p class="text-gray-600 text-xs">Reservation</p>
                         </div>
                     </div>
 
                     <a href="{{ route('flightShow', $flight->id) }}" 
                        class="block text-center bg-blue-500 text-white py-2 mt-4 rounded hover:bg-blue-600 transition">
-                       More Info
+                       Reservar
                     </a>
                 </div>
             </div>
