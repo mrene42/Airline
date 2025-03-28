@@ -54,6 +54,7 @@ class DatabaseSeeder extends Seeder
             'arrival' => 'London',
             'plane_id' => 1,
             'available'=> true,
+            'image' => 'https://www.universal-assistance.com/uablog/wp-content/uploads/2022/12/big-ben.png',
         ]);
 
         Flight::create([
@@ -63,15 +64,18 @@ class DatabaseSeeder extends Seeder
             'arrival' => 'New York',
             'plane_id' => 2,
             'available'=> false,
+            'image' => 'https://i0.wp.com/elcalderoviajero.com/wp-content/uploads/2019/06/nueva-york-07.jpg?fit=750%2C500&ssl=1',
+
         ]);
 
         Flight::create([
             'plane_id' => 1,
             'date' => '2025-02-07',
-            'departure' => 'New York',
-            'arrival' => 'London',
+            'departure' => 'Spain',
+            'arrival' => 'Italy',
             'plane_id' => 1,
             'available'=> true,
+            'image' => 'https://tourismmedia.italia.it/is/image/mitur/1600X1000_6_posti_piu_belli_d_italia_da_non_perdere_hero?wid=2160&hei=1320&fit=constrain,1&fmt=webp',
         ]);
     }
 }

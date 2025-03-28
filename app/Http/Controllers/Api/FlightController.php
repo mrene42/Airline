@@ -37,6 +37,7 @@ class FlightController extends Controller
             'arrival' => $request->arrival,
             'plane_id' => $request->plane_id,
             'available' => $request->available,
+            'image' => $request->image,
         ]);
 
         $flight->save();
@@ -75,6 +76,7 @@ class FlightController extends Controller
             'arrival' => $request->arrival,
             'plane_id' => $request->plane_id,
             'available' => $request->available,
+            'image' => $request->image,
         ]);
 
         $flight->save();

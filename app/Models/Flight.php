@@ -14,6 +14,7 @@ class Flight extends Model
         'arrival',
         'plane_id',
         'available',
+        'image',
     ];
 
     public function plane(): BelongsTo

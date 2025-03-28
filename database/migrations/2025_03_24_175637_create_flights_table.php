@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('arrival');
             $table->foreignId('plane_id')->constrained("planes")->onDelete('cascade');
             $table->boolean('available')->default(true);
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -6,8 +6,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         @foreach ($flights as $flight)
             <div class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-                <div class="h-48 bg-cover bg-center" style="background-image: url('/img/card-left.jpg');">
-                </div>
+                <div class="h-48 bg-cover bg-center" style="background-image: url({{ $flight->image }});"></div>
 
                 <div class="p-5">
                     <p class="text-sm text-gray-500">Flight: <span class="font-semibold">{{ $flight->id }}</span></p>
