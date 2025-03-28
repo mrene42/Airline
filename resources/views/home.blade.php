@@ -15,10 +15,6 @@
             class="rounded-md bg-indigo-600 px-5 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 transform hover:scale-105 hover:bg-indigo-500">
             Explore Flights
             </a>
-            <a href="#" 
-            class="text-lg font-semibold text-gray-900 hover:text-indigo-600 transition">
-            More information →
-            </a>
         </div>
     </div>
 @endsection
