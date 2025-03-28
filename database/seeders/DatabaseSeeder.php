@@ -62,7 +62,7 @@ class DatabaseSeeder extends Seeder
         
         Flight::create([
             'plane_id' => 1,
-            'date' => '2025-02-05',
+            'date' => '2025-02-05 12:00',
             'departure' => 'New York',
             'arrival' => 'London',
             'plane_id' => 1,
@@ -72,7 +72,7 @@ class DatabaseSeeder extends Seeder
 
         Flight::create([
             'plane_id' => 2,
-            'date' => '2025-02-06',
+            'date' => '2025-02-06 12:30',
             'departure' => 'London',
             'arrival' => 'New York',
             'plane_id' => 2,
@@ -83,7 +83,7 @@ class DatabaseSeeder extends Seeder
 
         Flight::create([
             'plane_id' => 1,
-            'date' => '2025-02-07',
+            'date' => '2025-02-07 13:00',
             'departure' => 'Spain',
             'arrival' => 'Italy',
             'plane_id' => 1,
