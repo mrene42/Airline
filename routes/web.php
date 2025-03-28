@@ -11,7 +11,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-//Auth::routes();
+Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Auth routes
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
@@ -40,3 +42,4 @@ Route::get('/flights/{id}', [FlightController::class, 'show'])->name('flightShow
 Route::get('/errorblade', function () {
     return view('errorBlade');
 })->name('errorBlade');
+
