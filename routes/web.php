@@ -25,11 +25,11 @@ Route::post('/register', [AuthController::class, 'register'])->name('registerPro
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //Plane routes
-Route::get('/planes', [PlaneController::class, 'index'])->name('planeHome');
+Route::get('/planes', [PlaneController::class, 'index'])->name('planeHome')->middleware(IsAdmin::class, 'auth');
 Route::delete('/planes/{id}',[PlaneController::class,'destroy'])->name('planeDelete')->middleware(IsAdmin::class, 'auth');
-Route::post('/planes',[PlaneController::class,'store'])->name('planeStore');
-Route::put('/planes/{id}',[PlaneController::class,'update'])->name('planeUpdate');
-Route::get('/planes/{id}', [PlaneController::class, 'show'])->name('planeShow');
+Route::post('/planes',[PlaneController::class,'store'])->name('planeStore')->middleware(IsAdmin::class, 'auth');
+Route::put('/planes/{id}',[PlaneController::class,'update'])->name('planeUpdate')->middleware(IsAdmin::class, 'auth');;
+Route::get('/planes/{id}', [PlaneController::class, 'show'])->name('planeShow')->middleware(IsAdmin::class, 'auth');;
 
 //Flight routes
 Route::get('/flights', [FlightController::class, 'index'])->name('flightHome');
