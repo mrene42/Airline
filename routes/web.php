@@ -30,7 +30,7 @@ Route::delete('/planes/{id}',[PlaneController::class,'destroy'])->name('planeDel
 Route::post('/planes',[PlaneController::class,'store'])->name('planeStore')->middleware(IsAdmin::class, 'auth');
 Route::put('/planes/{id}',[PlaneController::class,'update'])->name('planeUpdate')->middleware(IsAdmin::class, 'auth');
 Route::get('/planes/{id}', [PlaneController::class, 'show'])->name('planeShow')->middleware(IsAdmin::class, 'auth');
-Route::get('/planes/edit/{id}', [PlaneController::class, 'edit'])->name('planeEdit')->middleware(IsAdmin::class, 'auth');
+Route::get('/planes/{id}', [PlaneController::class, 'edit'])->name('planeEdit')->middleware(IsAdmin::class, 'auth');
 Route::get('/planes/create', [PlaneController::class, 'create'])->name('planeCreate')->middleware(IsAdmin::class, 'auth');
 
 //Flight routes
@@ -39,6 +39,9 @@ Route::delete('/flights/{id}',[FlightController::class,'destroy'])->name('flight
 Route::post('/flights',[FlightController::class,'store'])->name('flightStore');
 Route::put('/flights/{id}',[FlightController::class,'update'])->name('flightUpdate');
 Route::get('/flights/{id}', [FlightController::class, 'show'])->name('flightShow');
+Route::get('/flights/{id}', [FlightController::class, 'edit'])->name('flightEdit');
+Route::get('/flights/create', [FlightController::class, 'create'])->name('flightCreate');
+
 
 //Error blade
 Route::get('/errorblade', function () {
