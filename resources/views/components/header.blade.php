@@ -1,10 +1,11 @@
 <header class="bg-blue-600 p-4 text-white">
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="container mx-auto flex justify-between items-center px-8">
         <!-- Imagen del logo en lugar del texto -->
         <a href="/">
-            <img src="{{ asset('img/logoSkyline.png') }}" alt="Airline Logo" class="h-15">
+            <img src="{{ asset('img/logoSkyline.png') }}" alt="Airline Logo" class="h-12">
+            SKYLINE
         </a>
-
+       
         <nav>
             <ul class="hidden md:flex space-x-4 text-lg">
                 <li><a href="/" class="hover:underline">Home</a></li>
@@ -12,7 +13,7 @@
                 <li><a href="{{ route('flightHome') }}" class="hover:underline">Flights</a></li>
             </ul>
         </nav>
-        
+       
         <div class="flex space-x-4">
             <!-- Si el usuario está logueado -->
             @if (Auth::check())

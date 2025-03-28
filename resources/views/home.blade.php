@@ -2,8 +2,8 @@
 @section('content')
     <div class="flex flex-col items-center justify-center h-screen text-center px-6">
         
-        <h1 class="text-5xl sm:text-7xl font-extrabold text-gray-900 animate-fade-in">
-            Welcome to <span class="text-indigo-600">Airline</span>
+        <h1 class="text-2xl sm:text-5xl font-extrabold text-gray-900 animate-fade-in">
+            Welcome to <span class="text-indigo-600">Skyline</span>
         </h1>
         
         <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl animate-fade-in delay-200">
