@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
         // Plane seeder
 
         Plane::create([
-            'name' => 'Boeing 747',
+            'name' => 'Boeing 737',
             'seats' => 366,
             'imgplane' => 'https://a21.com.mx/sites/default/files/field/image/imageickhckjc.jpg',
         ]);
@@ -44,6 +44,19 @@ class DatabaseSeeder extends Seeder
             'seats' => 555,
             'imgplane' => 'https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2025/02/global-airlines-2025-airbus-a380.jpeg',
         ]);
+
+        Plane::create([
+            'name' => 'Boeing 777',
+            'seats' => 396,
+            'imgplane' => 'https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2016/02/512661-michelin-proveedor-unico-neumaticos-boeing-777.jpg?tf=3840x',
+        ]);
+
+        Plane::create([
+            'name' => 'Airbus A350',
+            'seats' => 440,
+            'imgplane' => 'https://forbes.es/wp-content/uploads/2024/05/fotonoticia_20240506165720_1920.jpg',
+        ]);
+
 
         // Flight seeder
         
