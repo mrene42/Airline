@@ -1,8 +1,12 @@
 <header class="bg-blue-600 p-4 text-white">
     <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-xl font-bold">AIRLINE</h1>
+        <!-- Imagen del logo en lugar del texto -->
+        <a href="/">
+            <img src="{{ asset('img/logoSkyline.png') }}" alt="Airline Logo" class="h-15">
+        </a>
+
         <nav>
-            <ul class="hidden md:flex space-x-4">
+            <ul class="hidden md:flex space-x-4 text-lg">
                 <li><a href="/" class="hover:underline">Home</a></li>
                 <li><a href="{{ route('planeHome') }}" class="hover:underline">Planes</a></li>
                 <li><a href="{{ route('flightHome') }}" class="hover:underline">Flights</a></li>
